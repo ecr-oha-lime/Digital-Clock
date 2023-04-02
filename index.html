@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>数字时钟</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body background="https://api.dujin.org/bing/1920.php"
+	style="background-repeat:no-repeat
+	background- attachment fixed;
+	background-size:100% 100%; ">
+    <div class="container">
+        <div class="clock">
+			<div class="box">
+            	<span id="hour">11</span>:
+            	<span id="minute">45</span>:
+           		<span id="second">14</span>
+			</div>
+
+        </div>
+    </div>
+	
+    <script>
+		const hour = document.getElementById("hour");
+		const minute = document.getElementById("minute");
+		const second = document.getElementById("second");
+		function updateClock() {
+  		const date = new Date();
+  		let h = date.getHours();
+  		let m = date.getMinutes();
+  		let s = date.getSeconds();
+  		h = h < 10 ? "0" + h : h;
+  		m = m < 10 ? "0" + m : m;
+  		s = s < 10 ? "0" + s : s;
+  		hour.textContent = h;
+  		minute.textContent = m;
+		second.textContent = s;}
+		setInterval(updateClock,1000);
+</script>
+</body>
+</html>
