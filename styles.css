@@ -29,9 +29,9 @@
     padding: 40px 80px;
     color: #fff;
 }
-.btn{
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(30px);
-    border-radius: 15px;
-    color: #fff;
+.pic{
+    background-image: url("sheet.png");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:right top;
 }
