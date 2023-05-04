@@ -14,7 +14,7 @@
 .clock {
     text-shadow: 8px 8px 8px #d2d2d2;
     font-family: 'Orbitron', sans-serif;
-    font-size: 10rem;
+    font-size: 8rem;
 }
 
 .box {
@@ -28,10 +28,4 @@
     line-height: 1;
     padding: 40px 80px;
     color: #fff;
-}
-.pic{
-    background-image: url("sheet.png");
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:right top;
 }
