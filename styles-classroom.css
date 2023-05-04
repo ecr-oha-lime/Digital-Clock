@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock {
+    text-shadow: 8px 8px 8px #d2d2d2;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10rem;
+}
+
+.box {
+    /* 重点设置下面两个属性 */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 120px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1;
+    padding: 40px 80px;
+    color: #fff;
+}
+.pic{
+    background-image: url("sheet.png");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:right top;
+}
