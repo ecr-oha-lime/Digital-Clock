@@ -4,37 +4,51 @@
     <meta charset="utf-8">
     <title>数字时钟</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body background="https://bing.shangzhenyang.com/api/1080p" style="background-repeat:no-repeat background-attachment fixed; background-position:center;background-size:100% 100%; ">
+	<!-- 页面背景设置 -->
 	<div class="pic">
-    <div class="container">
-        <div class="clock">
-			<div class="box">
-            	<span id="hour">11</span>:
-            	<span id="minute">45</span>:
-           		<span id="second">14</span>
-			</div>
-        </div>
-    </div>
-	
+    		<div class="container">
+			<div class="clock">
+				<!-- 数字时钟区域 -->
+				<div class="box">
+            				<!-- 时、分、秒显示区域 -->
+            				<span id="hour">11</span>:
+            				<span id="minute">45</span>:
+           				<span id="second">14</span>
+				</div>
+       			</div>
+    		</div>
+	</div>
     <script>
+		// 获取时、分、秒的元素
 		const hour = document.getElementById("hour");
 		const minute = document.getElementById("minute");
 		const second = document.getElementById("second");
+		
+		// 更新时钟函数
 		function updateClock() {
-  		const date = new Date();
-  		let h = date.getHours();
-  		let m = date.getMinutes();
-  		let s = date.getSeconds();
-  		h = h < 10 ? "0" + h : h;
-  		m = m < 10 ? "0" + m : m;
-  		s = s < 10 ? "0" + s : s;
-  		hour.textContent = h;
-  		minute.textContent = m;
-		second.textContent = s;}
-		setInterval(updateClock,1000);
-</script>
+			// 获取当前时间
+  			const date = new Date();
+  			
+  			// 获取当前小时、分钟、秒钟
+  			let h = date.getHours();
+  			let m = date.getMinutes();
+  			let s = date.getSeconds();
+  			
+  			// 格式化小时、分钟、秒钟，如果小于10，在前面加上0
+  			h = h < 10 ? "0" + h : h;
+  			m = m < 10 ? "0" + m : m;
+  			s = s < 10 ? "0" + s : s;
+  			
+  			// 更新时、分、秒的显示
+  			hour.textContent = h;
+  			minute.textContent = m;
+			second.textContent = s;
+		}
+		
+		// 每500毫秒更新一次时钟
+		setInterval(updateClock, 500);
+	</script>
 </body>
 </html>
