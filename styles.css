@@ -1,31 +1,36 @@
+/* 还是AI加注释好用 */
+/* 设置全局样式 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 设置外边距为0 */
+    padding: 0; /* 设置内边距为0 */
+    box-sizing: border-box; /* 设置盒模型为border-box */
 }
 
+/* 设置容器样式 */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: flex; /* 设置为弹性布局 */
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    height: 100vh; /* 设置高度为视口高度 */
 }
 
+/* 设置时钟样式 */
 .clock {
-    text-shadow: 8px 8px 8px #d2d2d2;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 8rem;
+    text-shadow: 8px 8px 8px #d2d2d2; /* 设置文本阴影效果 */
+    font-family: 'Orbitron', sans-serif; /* 设置字体为'Orbitron'或无衬线字体 */
+    font-size: 8rem; /* 设置字体大小为8rem */
+    top: -20%; /* 从顶部偏移位置 */
 }
 
+/* 设置盒子样式 */
 .box {
-    /* 重点设置下面两个属性 */
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border-radius: 120px;
-    font-family: sans-serif;
-    text-align: center;
-    line-height: 1;
-    padding: 40px 80px;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3); /* 设置背景颜色为带透明度的白色 */
+    backdrop-filter: blur(30px); /* 设置背景模糊效果 */
+    -webkit-backdrop-filter: blur(30px); /* 兼容性设置背景模糊效果 */
+    border-radius: 100px; /* 设置边框圆角为100px */
+    font-family: sans-serif; /* 设置字体为无衬线字体 */
+    text-align: center; /* 文本居中对齐 */
+    line-height: 1; /* 设置行高为1 */
+    padding: 20px 50px; /* 设置内边距为20px顶部和底部，50px左右 */
+    color: #fff; /* 设置字体颜色为白色 */
 }
