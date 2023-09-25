@@ -1,4 +1,3 @@
-/* 还是AI加注释好用 */
 /* 设置全局样式 */
 * {
     margin: 0; /* 设置外边距为0 */
@@ -6,31 +5,46 @@
     box-sizing: border-box; /* 设置盒模型为border-box */
 }
 
-/* 设置容器样式 */
+/* 创建一个容器，用于居中显示 */
 .container {
-    display: flex; /* 设置为弹性布局 */
+    display: flex; /* 使用弹性布局 */
     justify-content: center; /* 水平居中对齐 */
     align-items: center; /* 垂直居中对齐 */
-    height: 100vh; /* 设置高度为视口高度 */
+    height: 100vh; /* 设置高度为视口的100% */
 }
 
-/* 设置时钟样式 */
+/* 设置时钟的样式 */
 .clock {
-    text-shadow: 8px 8px 8px #d2d2d2; /* 设置文本阴影效果 */
-    font-family: 'Orbitron', sans-serif; /* 设置字体为'Orbitron'或无衬线字体 */
-    font-size: 8rem; /* 设置字体大小为8rem */
-    top: -20%; /* 从顶部偏移位置 */
+    text-shadow: 8px 8px 8px #d2d2d2; /* 添加文字阴影效果 */
+    font-family: sans-serif; /* 设置字体为无衬线字体 */
+    font-size: 5rem; /* 设置字体大小为5rem */
+    position: relative;
+    top: -20%; /* 设置相对定位的偏移量为-20% */
 }
 
-/* 设置盒子样式 */
+/* 设置日期的样式 */
+.date {
+    text-shadow: 8px 8px 8px #d2d2d2; /* 添加文字阴影效果 */
+    font-family: sans-serif; /* 设置字体为无衬线字体 */
+    font-size: 2rem; /* 设置字体大小为2rem */
+    position: relative; /* 设置相对定位 */
+    text-align: center; /* 文字居中对齐 */
+    margin-top: 10px; /* 设置顶部外边距为10px */
+    top: auto; /* 取消top属性的设置 */
+    color: white; /* 设置字体颜色为白色 */
+}
+
+/* 设置容器的样式 */
 .box {
-    background-color: rgba(255, 255, 255, 0.3); /* 设置背景颜色为带透明度的白色 */
-    backdrop-filter: blur(30px); /* 设置背景模糊效果 */
-    -webkit-backdrop-filter: blur(30px); /* 兼容性设置背景模糊效果 */
+    background-color: rgba(255, 255, 255, 0.3); /* 设置背景颜色为半透明白色 */
+    backdrop-filter: blur(30px); /* 添加背景模糊效果 */
+    -webkit-backdrop-filter: blur(30px); /* 兼容性设置，用于支持webkit内核的浏览器 */
     border-radius: 100px; /* 设置边框圆角为100px */
     font-family: sans-serif; /* 设置字体为无衬线字体 */
-    text-align: center; /* 文本居中对齐 */
+    text-align: center; /* 文字居中对齐 */
     line-height: 1; /* 设置行高为1 */
-    padding: 20px 50px; /* 设置内边距为20px顶部和底部，50px左右 */
+    padding: 20px 50px; /* 设置内边距为20px的上下内边距和50px的左右内边距 */
     color: #fff; /* 设置字体颜色为白色 */
+    border: 1px solid #ccc; /* 设置边框为1px的实线边框，颜色为灰色 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
 }
