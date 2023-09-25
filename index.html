@@ -5,10 +5,10 @@
     <title>数字时钟</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-	
+
 <!-- 设置背景，替换background=“”引号内内容
 	默认必应每日一图，API来自热铁盒 https://bing.shangzhenyang.com/api/1080p
-	以下API来自举个栗子
+	以下API来自举个栗子 https://www.mwm.moe/
 	二次元自适应 https://t.mwm.moe/ycy 
 	萌版自适应 https://t.mwm.moe/moez
 	萌版横图 https://t.mwm.moe/moe
@@ -26,26 +26,23 @@
 	<div class="pic">
 		<div class="container">
 			 <div class="clock">
-				 <div class="box">
+				<div class="box">
             			<!-- 时、分、秒显示区域 -->
-            			<span id="hour">11</span>:
-            			<span id="minute">45</span>:
+            				<span id="hour">11</span>:
+            				<span id="minute">45</span>:
            				<span id="second">14</span>
-					</div>
+				</div>
 				<!-- 数字时钟、日期区域 -->
 				 <div class="date">
 					<!-- 日期显示 -->
-				    <span id="weekday"></span>
-				    <span id="day"></span>
-				    <span id="month"></span>
+				 	<span id="weekday"></span>
+				   	<span id="day"></span>
+				   	<span id="month"></span>
 					<span id="year">
 					</span>
-				 </div>
-				 
+				 </div> 
 			</div>
-			
 		</div>
-		
 	</div>
 	
 	<script>
@@ -64,8 +61,6 @@
   			let h = date.getHours();
   			let m = date.getMinutes();
   			let s = date.getSeconds();
-
-
   			
   			// 格式化小时、分钟、秒钟，如果小于10，在前面加上0
   			h = h < 10 ? "0" + h : h;
@@ -105,8 +100,8 @@
 	    year.textContent = yearStr;
 		}
 
-		// 每1000ms更新一次日期
-		setInterval(updateDate, 1000);
+	// 每1000ms更新一次日期
+	setInterval(updateDate, 1000);
 		
 	</script>
 </body>
