@@ -5,36 +5,67 @@
     <title>数字时钟</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+	
+<!-- 设置背景，替换background=“”引号内内容
+	默认必应每日一图，API来自热铁盒 https://bing.shangzhenyang.com/api/1080p
+	以下API来自举个栗子
+	二次元自适应 https://t.mwm.moe/ycy 
+	萌版自适应 https://t.mwm.moe/moez
+	萌版横图 https://t.mwm.moe/moe
+	AI自适应 https://t.mwm.moe/ai
+	原神自适应 https://t.mwm.moe/ysz
+	原神横图 https://t.mwm.moe/ys
+	PC横图 https://t.mwm.moe/pc
+	风景横图 https://t.mwm.moe/fj
+	白底横图 https://t.mwm.moe/bd
+	小狐狸 https://t.mwm.moe/xhl
+	七濑胡桃 https://t.mwm.moe/lai
+	竖图就不需要了吧（
+	-->
 <body background="https://bing.shangzhenyang.com/api/1080p" style="background-repeat:no-repeat background-attachment fixed; background-position:center;background-size:100% 100%; ">
-	<!-- 页面背景设置 -->
 	<div class="pic">
-    		<div class="container">
-			<div class="clock">
-				<!-- 数字时钟区域 -->
-				<div class="box">
-            				<!-- 时、分、秒显示区域 -->
-            				<span id="hour">11</span>:
-            				<span id="minute">45</span>:
+		<div class="container">
+			 <div class="clock">
+				 <div class="box">
+            			<!-- 时、分、秒显示区域 -->
+            			<span id="hour">11</span>:
+            			<span id="minute">45</span>:
            				<span id="second">14</span>
-				</div>
-       			</div>
-    		</div>
+					</div>
+				<!-- 数字时钟、日期区域 -->
+				 <div class="date">
+					<!-- 日期显示 -->
+				    <span id="weekday"></span>
+				    <span id="day"></span>
+				    <span id="month"></span>
+					<span id="year">
+					</span>
+				 </div>
+				 
+			</div>
+			
+		</div>
+		
 	</div>
-    <script>
+	
+	<script>
+		// 时钟函数
 		// 获取时、分、秒的元素
 		const hour = document.getElementById("hour");
 		const minute = document.getElementById("minute");
 		const second = document.getElementById("second");
-		
+
 		// 更新时钟函数
 		function updateClock() {
 			// 获取当前时间
   			const date = new Date();
-  			
+	  			
   			// 获取当前小时、分钟、秒钟
   			let h = date.getHours();
   			let m = date.getMinutes();
   			let s = date.getSeconds();
+
+
   			
   			// 格式化小时、分钟、秒钟，如果小于10，在前面加上0
   			h = h < 10 ? "0" + h : h;
@@ -47,8 +78,36 @@
 			second.textContent = s;
 		}
 		
-		// 每500毫秒更新一次时钟
-		setInterval(updateClock, 500);
+		// 每1000毫秒更新一次时钟
+		setInterval(updateClock, 1000);
+		
+		// 日期函数
+		// 获取日期的元素
+		const weekday = document.getElementById("weekday");
+		const day = document.getElementById("day");
+		const month = document.getElementById("month");
+		const year = document.getElementById("year");
+
+		// 更新日期函数
+		function updateDate() {
+		    // 获取当前日期
+		    const date = new Date();
+
+		    // 获取当前星期、日期、月份、年份
+		    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+		    const formattedDate = date.toLocaleDateString('zh-CN', options);
+
+	    // 更新日期的显示
+	    const [weekdayStr, monthStr, dayStr, yearStr] = formattedDate.split(' ');
+	    weekday.textContent = weekdayStr;
+	    day.textContent = dayStr;
+	    month.textContent = monthStr;
+	    year.textContent = yearStr;
+		}
+
+		// 每1000ms更新一次日期
+		setInterval(updateDate, 1000);
+		
 	</script>
 </body>
 </html>
