@@ -1,7 +1,9 @@
 # Digital-Clock
 就是俺用new bing之后做了点小改动的钟。
 
-基本重写了一遍，bing写的也就看个乐。
+基本重写了一遍，bing写的css也就看个乐。
+
+所以我用CopyAsk写了css（其实就是GPT3.5 XD）。
 
 # 样板房
 https://limetime.pages.dev/
@@ -15,3 +17,5 @@ https://limetime.pages.dev/
 3. 随便起名，确定
 4. 点只因新添加的壁纸
 5. enjoy yourself/yourselves
+
+* 可以在index.html中更换默认背景
