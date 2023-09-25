@@ -15,10 +15,22 @@
     text-shadow: 8px 8px 8px #d2d2d2;
     font-family: 'Orbitron', sans-serif;
     font-size: 10rem;
+    position: relative;
+    top: -20%;
+}
+
+.date {
+    text-shadow: 8px 8px 8px #d2d2d2; 
+    font-family: sans-serif; 
+    font-size: 2rem; 
+    position: relative; 
+    text-align: center; 
+    margin-top: 10px; 
+    top: auto; 
+    color: white;
 }
 
 .box {
-    /* 重点设置下面两个属性 */
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -29,6 +41,7 @@
     padding: 40px 80px;
     color: #fff;
 }
+
 .pic{
     background-image: url("sheet.png");
     background-repeat:no-repeat;
