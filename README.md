@@ -3,8 +3,6 @@
 
 基本重写了一遍，bing写的css也就看个乐。
 
-所以我用CopyAsk写了css（其实就是GPT3.5 XD）。
-
 # 样板房
 https://limetime.pages.dev/
 
